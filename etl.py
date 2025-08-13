@@ -13,7 +13,6 @@ MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client["malware_db"]
 collection = db["malware_samples"]
-
 # Extract
 def extract_malware_list():
     url = f"https://malshare.com/api.php?api_key={API_KEY}&action=getlist"
